@@ -1,0 +1,147 @@
+
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>... intro ...</h1>
+
+<h1 className="borderline">0</h1>
+
+
+
+-----
+
+# some thought on inheritance
+<center>
+<img src="./content/img/EichObjects.png" style={{top: '15vh', zIndex: 100, width: '85vw'}} />
+</center>
+
+-----
+
+# we can shift from
+
+<div style={{marginLeft: '5vw'}}>
+
+<Box sx={{marginTop: '1vh'}}>
+<h1 style={{fontSize: '7vh', color: 'orange'}}>Getting this Inheritance in Timeline</h1> 
+</Box>
+
+<br/>
+
+<div className="timelineText">
+
+
+# &mdash; <span style={{color:'gray'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'gray'}}>Line</span> &mdash; &mdash; <span style={{color:'gray'}}>&gt;</span>
+
+</div>
+
+
+<div className="timelineTextBlack">
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+
+</div>
+
+<Chart id='chartAbs' opts={{
+	chart : {
+		type : 'tree',
+		chartData : {
+			name : 'Entry',
+			stroke: 'white',
+			children : [{
+				name: 'Objects',
+				stroke: 'white',
+				children : [{
+					name: 'Builtins',
+					stroke: 'white',
+					children : [{
+						name: 'Mix with Specific',
+						stroke: 'white'
+					}]
+				}, {
+					name: 'Specific',
+					stroke: 'white',
+					children : [{
+						name: ' . setPrototypeOf',
+						stroke: 'white',
+					}, {
+						name: 'new Proxy ( ...',
+						stroke: 'white',
+					}, {
+						name: 'Class + extends',
+						stroke: 'white',
+					}, {
+						name: 'Symbol . toPrimitive',
+						stroke: 'white',
+					}, {
+						name: 'async ~ await new',
+						stroke: 'white',
+					}]
+				}],
+			}, {
+				name: 'Primitives',
+				stroke: 'white',
+				children : [{
+					name: 'Number',
+					stroke: 'white',
+				}, {
+					name: 'Boolean',
+					stroke: 'white',
+				}, {
+					name: 'String',
+					stroke: 'white',
+				}],
+			}],
+		},
+		print : app.print,
+		dy : 15,
+		dx : 95,
+		width : 450,
+		margin : {
+			top: 15, right: 40, bottom: 10, left: 40
+		}
+	}
+}} />
+
+</div>
+
+
+-----
+
+# to even more frightening modern picture
+<center>
+<img src="./content/JS_Object_Topology.svg" style={{top: '15vh', zIndex: 100, width: '85vw'}} />
+</center>
+
+-----
+
+# even more frightening modern picture
+<center>
+<img src="./content/img/EichNullUndefined.png" style={{top: '15vh', zIndex: 100, width: '85vw'}} />
+</center>
+
+
+-----
+
+# even more frightening modern picture
+<center>
+<img src="./content/JS_Object_Topology.svg" style={{top: '15vh', zIndex: 100, width: '85vw'}} />
+</center>
+
+-----
+
+

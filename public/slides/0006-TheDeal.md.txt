@@ -1,0 +1,323 @@
+
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>The Deal</h1>
+
+<h1 className="borderline">1</h1>
+
+
+-----
+
+# From the beginner's Prototypes Example
+
+```javascript className=codehugeshift
+// back to the 1995
+var TheConstructor = function () {
+	this;
+	debugger;
+};
+
+var instance = new TheConstructor;
+// we can see constructor definition
+// made like this
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/01_1995')}}>Run Me</Button>
+
+-----
+
+# From the beginner's Prototypes Example
+
+```javascript className=codehuge
+var TheConstructor = function () { /* ... */ };
+
+var instance = new TheConstructor;
+
+var TheNextConstructor = function () { /* ... */ };
+TheNextConstructor.prototype = instance;
+TheNextConstructor
+   .prototype.constructor = TheNextConstructor;
+
+```
+
+-----
+
+# Singleton Wrapper
+
+```javascript className=codehugeshift
+
+const SingletonWrapper = function () { };
+
+SingletonWrapper.prototype =
+			Object.create( process ); // ← !
+
+SingletonWrapper.prototype
+	.constructor = SingletonWrapper;
+
+const instance = new SingletonWrapper;
+
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/03_SingletonWrapper')}}>Run Me</Button>
+
+
+-----
+
+# Monotonic Wrapper → Class
+
+```javascript className=codehugeshift
+
+const MonotonicWrapper = function () { };
+
+MonotonicWrapper.prototype.someValue = 123;
+
+class MyClass extends MonotonicWrapper { };
+
+// reference MonotonicWrapper.prototype
+const instance1 = new MyClass;
+const instance2 = new MyClass;
+
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/04_MonotonicWrapper')}}>Run Me</Button>
+
+-----
+
+# And now we have: Simple Class
+
+```javascript className=codehugeshift
+
+class TheClass {};
+
+debugger;
+
+const instance = new TheClass;
+
+debugger;
+
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/02_01_SimpleClass')}}>Run Me</Button>
+
+-----
+
+# And now we have: Extended Class
+
+```javascript className=codehugeshift
+
+class BaseClass {};
+
+class TheClass extends BaseClass{};
+
+debugger;
+
+const instance = new TheClass;
+
+debugger;
+
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/02_02_ExtendedClass')}}>Run Me</Button>
+
+
+-----
+
+# And this was the examples of
+
+```javascript className=codegiantshift
+
+→ MultiLevel Inheritance
+
+
+```
+
+
+-----
+
+# And this was the examples of
+
+```javascript className=codegiantshift
+
+→ MultiLevel Inheritance
+
+→ Based on Prototype Chain
+
+
+```
+
+
+-----
+
+# And this was the examples of
+
+```javascript className=codegiantshift
+
+→ MultiLevel Inheritance
+
+→ Based on Prototype Chain
+
+→ and not so easy to understand
+
+```
+
+-----
+
+# but accordingly with the Timeline
+
+<div style={{marginLeft: '5vw'}}>
+
+<Box sx={{marginTop: '1vh'}}>
+<h1 style={{fontSize: '7vh', color: 'orange'}}>lifecycle of our Data <span style={{marginLeft: '1vw', foneSize: '8vh', color: 'green'}}> & C . O . D . E .</span> <span style={{marginLeft: '1vw', foneSize: '9vh', color: 'gray'}}>in Time</span></h1> 
+</Box>
+
+<br/>
+
+<div className="timelineText">
+
+
+# &mdash; <span style={{color:'gray'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'gray'}}>Line</span> &mdash; &mdash; <span style={{color:'gray'}}>&gt;</span>
+
+</div>
+
+
+<div className="timelineTextBlack">
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+# &mdash; <span style={{color:'black'}}>Time</span> &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'gray'}}>|</span> &mdash; &mdash; <span style={{color:'black'}}>Line</span> &mdash; <span style={{color:'black'}}>&gt;</span>
+
+
+</div>
+
+<Chart id='chartAbs' opts={{
+	chart : {
+		type : 'tree',
+		chartData : {
+			name : 'Entry',
+			stroke: 'white',
+			children : [{
+				name: 'Leaf 1',
+				stroke: 'white',
+				children : [{
+					name: 'Leaf 1 . 1',
+					stroke: 'white',
+					children : [{
+						name: 'Leaf 1 . 1',
+						stroke: 'white'
+					}]
+				}, {
+					name: 'Leaf 1 . 2',
+					stroke: 'white',
+					children : [{
+						name: 'Leaf 1 . 2',
+						stroke: 'white',
+					}]
+				}],
+			}, {
+				name: 'Leaf 2',
+				stroke: 'white',
+				children : [{
+					name: 'Leaf 2 . 1',
+					stroke: 'white',
+				}, {
+					name: 'Leaf 2 . 2',
+					stroke: 'white',
+				}, {
+					name: 'Leaf 2 . 3',
+					stroke: 'white',
+				}],
+			}],
+		},
+		print : app.print,
+		dy : 15,
+		dx : 95,
+		width : 450,
+		margin : {
+			top: 15, right: 40, bottom: 10, left: 40
+		}
+	}
+}} />
+
+</div>
+
+
+
+
+-----
+
+# As an Additional Example we may think of the Following
+
+```javascript className=codehugeshift
+
+class BaseClass {
+	someProp = 123
+};
+
+const { someProp } = new BaseClass;
+
+const Derived = {
+	someProp
+};
+
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/09_someProp')}}>Run Me</Button>
+
+
+
+-----
+
+# As an Additional Example we may think of the Following
+
+```javascript className=codehugeshift
+
+class BaseClass {
+	get someProp () {
+        if (this instanceof BaseClass) {
+            return 123;
+        }
+
+        throw Error('Access Denied!');
+
+    }
+};
+
+```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/10_instancedProps')}}>Run Me</Button>
+
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '17vh', color: 'cyan'}}>How to make this?</h1>
+</center>
+</Box>
+
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '17vh', color: 'cyan'}}>How to make this?</h1>
+</center>
+</Box>
+
+
+<img src="./content/img/half_liter_mouse.jpg" style={{position: 'absolute', top: '50vh', left:'32vw', zIndex: 100, width: '35vw'}} />

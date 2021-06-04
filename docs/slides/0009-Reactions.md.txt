@@ -1,0 +1,35 @@
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>Reactions</h1>
+
+<h1 className="borderline">3</h1>
+
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '17vh', color: 'cyan'}}>The Final Example</h1>
+</center>
+</Box>
+
+
+
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '17vh', color: 'cyan'}}>The Final Example</h1>
+</center>
+</Box>
+
+
+<img src="./content/img/half_liter_mouse.jpg" style={{position: 'absolute', top: '50vh', left:'32vw', zIndex: 100, width: '35vw'}} />
+
+
+<Button onClick={() => { fetch('http://localhost:3001/example/09_Reactions')}}>Run Me</Button>
+
+
+-----
