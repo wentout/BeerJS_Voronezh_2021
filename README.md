@@ -12,7 +12,7 @@ git clone
 
 ## 2. go to the distro dir
 ```bash
-cd ./HolyJS_Piter_2021
+cd ./BeerJS_Voronezh_2021
 ```
 
 ## 3. install the dependencies
@@ -38,12 +38,12 @@ navigate your chrome to `chrome://inspect`, or do this kind of things for your p
 navigate your browser to 
 
 ```bash
-http://localhost:3001/HolyJS_Piter_2021
+http://localhost:3001/BeerJS_Voronezh_2021
 ```
 or
 
 ```bash
-https://wentout.github.io/HolyJS_Piter_2021/
+https://wentout.github.io/BeerJS_Voronezh_2021/
 ```
 
 ### fin
