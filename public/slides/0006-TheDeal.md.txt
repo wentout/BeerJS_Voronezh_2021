@@ -34,10 +34,10 @@ var TheConstructor = function () { /* ... */ };
 
 var instance = new TheConstructor;
 
-var TheNextConstructor = function () { /* ... */ };
-TheNextConstructor.prototype = instance;
-TheNextConstructor
-   .prototype.constructor = TheNextConstructor;
+var NextConstructor = function () { /* ... */ };
+NextConstructor.prototype = instance;
+NextConstructor
+	.prototype.constructor = NextConstructor;
 
 ```
 
