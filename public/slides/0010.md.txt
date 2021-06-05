@@ -53,7 +53,7 @@
 
 <br/>
 
-# [this talk with all examples](https://github.com/wentout/HolyJS_Piter_2021)
+# [this talk with all examples](https://wentout.github.io/BeerJS_Voronezh_2021/)
 
 <br/>
 
