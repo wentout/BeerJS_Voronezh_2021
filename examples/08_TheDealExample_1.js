@@ -8,15 +8,21 @@ debugger;
 // all you need is one only extend
 class Base extends BasePrototype {
     constructor() {
+        debugger;
         super();
 
+        debugger;
+
         this.numberValue = 123;
+
+        debugger;
+
         this.stringValue = '123';
         this.booleanValue = true;
 
         this.nullValue = null;
         this.undefinedValue = undefined;
-        
+
         this.symbolValue = Symbol('an example');
         this.bigIntValue = BigInt(0);
 
